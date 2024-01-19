@@ -46,4 +46,4 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
-# You can add a view for forgot password here
+
