@@ -22,7 +22,7 @@ This is a Django project showcasing user authentication features, including sign
    
 2. Install dependencies:
 
-- pip install -r requirements.txt
+- pip install -r req.txt
  
 3. Apply migrations:
 
