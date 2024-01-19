@@ -8,7 +8,6 @@ urlpatterns = [
     path('login/', login_view, name='login'),
     path('', home, name='home'),  # Add this line
     path('logout/', logout_view, name='logout'),  # Add this line
-    # path('forgot-password/', forgot_password, name='forgot_password'),
     path('forgot-password/', auth_views.PasswordResetView.as_view(
         template_name='forgot_password.html',  # Custom template for password reset form
         email_template_name='password_reset_email.html',  # Custom template for password reset email
