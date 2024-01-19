@@ -19,4 +19,4 @@ This is a Django project showcasing user authentication features, including sign
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   [git clone https://github.com/ajinasanthosh1997/django-authentication-sample.git]
