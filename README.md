@@ -38,23 +38,32 @@ This is a Django project showcasing user authentication features, including sign
 To enable email functionality, configure the following settings in settings.py:
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 EMAIL_HOST = 'your-smtp-host'
+
 EMAIL_PORT = 587
+
 EMAIL_USE_TLS = True
+
 EMAIL_HOST_USER = 'your-email@example.com'
+
 EMAIL_HOST_PASSWORD = 'your-email-password'
 
-or
+##OR
 
 Create a .env file in the project root with the following content:
 
-# .env file
+### .env file
 
-# Email settings
+### Email settings
 EMAIL_HOST_USER=your-email@example.com
+
 EMAIL_HOST_PASSWORD=your-email-password
+
 DEFAULT_FROM_EMAIL=your-email@example.com
-# Add other configuration variables as needed
+
+### Add other configuration variables as needed
+
 Replace your-email@example.com and your-email-password with your actual email credentials.
 
 Run migrations:
@@ -68,19 +77,26 @@ Start the development server:
 The project should now be running at http://localhost:8000/.
 
 Email Configuration
+
 To configure email settings, open the auth_project/settings.py file and update the email settings as follows:
 
-python
-Copy code
-# auth_project/settings.py
+
+### auth_project/settings.py
 
 from decouple import config
 
-# Email settings
+### Email settings
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 EMAIL_HOST = 'smtp-relay.sendinblue.com'
+
 EMAIL_PORT = 587
+
 EMAIL_USE_TLS = True
+
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD') 
+
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
